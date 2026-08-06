@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --color-neon-cyan: #00FFFF;
+  --neon-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 
+                 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+@utility neon-glow {
+  box-shadow: var(--neon-shadow);
+}
