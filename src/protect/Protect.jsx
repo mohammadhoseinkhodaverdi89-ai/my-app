@@ -1,13 +1,13 @@
-import { useNavigate, Outlet } from "react-router-dom"; // حتماً Outlet را اینجا اضافه کنید
+import { useNavigate, Outlet } from "react-router-dom";
 
 function Protect() {
-    const token = localStorage.getItem('userToken'); // دقت کنید کلید درست باشد
+    const token = localStorage.getItem('userToken');
      const navigated = useNavigate()
     if (!token) {
         return <button onClick={() => navigated(-1)} className="bg-purple-500 px-7 py-1.5 rounded-3xl flex justify-center items-center w-ful">back</button>;
     }
 
-    return <Outlet />; // حالا دیگر ارور نمی‌دهد
+    return <Outlet />; 
 }
 
 export default Protect;

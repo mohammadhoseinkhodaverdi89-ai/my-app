@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom"; // ۱. اضافه کردن useNavigate برای تغییر صفحه
+import { useNavigate } from "react-router-dom"; 
 import i18n from "../i18n";
 function Login({ onClose }) {
   const { t, i18n } = useTranslation();

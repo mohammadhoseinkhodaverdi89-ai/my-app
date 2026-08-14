@@ -13,21 +13,21 @@ import Details from "./Clothes/Details";
 import Footer from "./footer/Footer";
 function App() {
   const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 3000);
-  //   return () => clearTimeout(timer);
-  // }, []);
-  // if (loading) {
-  //   return (
-  //     <div className="min-h-screen bg-slate-950 flex justify-center items-center">
-  //       <span className="text-white text-xl font-inter tracking-widest animate-pulse">
-  //         Loadin...
-  //       </span>
-  //     </div>
-  //   );
-  // }
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-slate-950 flex justify-center items-center">
+        <span className="text-white text-xl font-inter tracking-widest animate-pulse">
+          Loadin...
+        </span>
+      </div>
+    );
+  }
   return (
     <div className="bg-slate-950 min-h-screen text-white">
       <Routes>
